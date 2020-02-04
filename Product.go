@@ -99,7 +99,7 @@ type ProductDTO struct {
 	EanList                         []string `json:"eanList,omitempty"`
 	UpcList                         []string `json:"upcList,omitempty"`
 	LiveOffersOrder                 string   `json:"liveOffersOrder,omitempty"`
-	FrequentlyBoughtTogether        string   `json:"frequentlyBoughtTogether,omitempty"`
+	FrequentlyBoughtTogether        []string `json:"frequentlyBoughtTogether,omitempty"`
 	Features                        []string `json:"features,omitempty"`
 	Description                     string   `json:"description,omitempty"`
 	HazardousMaterialType           string   `json:"hazardousMaterialType,omitempty"`
