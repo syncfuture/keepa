@@ -94,7 +94,7 @@ type ProductDTO struct {
 	ReleaseDate                     int         `json:"releaseDate,omitempty"`
 	Languages                       string      `json:"languages,omitempty"`
 	LastRatingUpdate                int         `json:"lastRatingUpdate,omitempty"`
-	EbayListingIds                  string      `json:"ebayListingIds,omitempty"`
+	EbayListingIds                  []float64   `json:"ebayListingIds,omitempty"`
 	LastEbayUpdate                  int         `json:"lastEbayUpdate,omitempty"`
 	EanList                         []string    `json:"eanList,omitempty"`
 	UpcList                         []string    `json:"upcList,omitempty"`
