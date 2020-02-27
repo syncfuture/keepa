@@ -1,11 +1,13 @@
 package keepa
 
+import "github.com/syncfuture/keepa/config"
+
 type KeepaClient struct {
-	Options *KeepaOptions
+	Config *config.KeepaConfig
 }
 
-func NewClient(options *KeepaOptions) (r *KeepaClient) {
+func NewClient(config *config.KeepaConfig) (r *KeepaClient) {
 	r = new(KeepaClient)
-	r.Options = options
+	r.Config = config
 	return r
 }

@@ -114,9 +114,9 @@ func (x *KeepaClient) GetProduct(query *GetProductQuery) (r *ProductResults, err
 	r = new(ProductResults)
 	var url string
 	if query.ASIN != "" {
-		url = fmt.Sprintf("%s/product?key=%s&domain=%d&asin=%s", x.Options.BaseURL, x.Options.AccessKey, x.Options.Domain, query.ASIN)
+		url = fmt.Sprintf("%s/product?key=%s&domain=%d&asin=%s", x.Config.BaseURL, x.Config.AccessKey, x.Config.Domain, query.ASIN)
 	} else if query.Code != "" {
-		url = fmt.Sprintf("%s/product?key=%s&domain=%d&code=%s", x.Options.BaseURL, x.Options.AccessKey, x.Options.Domain, query.Code)
+		url = fmt.Sprintf("%s/product?key=%s&domain=%d&code=%s", x.Config.BaseURL, x.Config.AccessKey, x.Config.Domain, query.Code)
 	} else {
 		panic("ASIN and Code cannot both be empty")
 	}
