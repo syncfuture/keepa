@@ -56,8 +56,6 @@ type ProductDTO struct {
 	DomainId                        int           `json:"domainId,omitempty"`
 	Type                            string        `json:"type,omitempty"`
 	HasReviews                      bool          `json:"hasReviews,omitempty"`
-	EAN                             int           `json:"ean,omitempty"`
-	UPC                             int           `json:"upc,omitempty"`
 	MPN                             string        `json:"mpnstring,omitempty"`
 	TrackingSince                   int           `json:"trackingSince,omitempty"`
 	Brand                           string        `json:"brandstring,omitempty"`
@@ -74,16 +72,16 @@ type ProductDTO struct {
 	Edition                         string        `json:"edition,omitempty"`
 	Platform                        string        `json:"platform,omitempty"`
 	Format                          string        `json:"format,omitempty"`
-	PackageHeight                   float32       `json:"packageHeight,omitempty"`
-	PackageLength                   float32       `json:"packageLength,omitempty"`
-	PackageWidth                    float32       `json:"packageWidth,omitempty"`
-	PackageWeight                   float32       `json:"packageWeight,omitempty"`
+	PackageHeight                   int           `json:"packageHeight,omitempty"`
+	PackageLength                   int           `json:"packageLength,omitempty"`
+	PackageWidth                    int           `json:"packageWidth,omitempty"`
+	PackageWeight                   int           `json:"packageWeight,omitempty"`
 	PackageQuantity                 int           `json:"packageQuantityint,omitempty"`
 	IsAdultProduct                  bool          `json:"isAdultProduct,omitempty"`
 	IsEligibleForTradeIn            bool          `json:"isEligibleForTradeIn,omitempty"`
 	IsEligibleForSuperSaverShipping bool          `json:"isEligibleForSuperSaverShipping,omitempty"`
-	Offers                          string        `json:"offers,omitempty"`
-	BuyBoxSellerIdHistory           string        `json:"buyBoxSellerIdHistory,omitempty"`
+	Offers                          []interface{} `json:"offers,omitempty"`
+	BuyBoxSellerIdHistory           []string      `json:"buyBoxSellerIdHistory,omitempty"`
 	IsRedirectASIN                  bool          `json:"isRedirectASIN,omitempty"`
 	IsSNS                           bool          `json:"isSNS,omitempty"`
 	Author                          string        `json:"author,omitempty"`
@@ -92,20 +90,20 @@ type ProductDTO struct {
 	NumberOfPages                   int           `json:"numberOfPages,omitempty"`
 	PublicationDate                 int           `json:"publicationDate,omitempty"`
 	ReleaseDate                     int           `json:"releaseDate,omitempty"`
-	Languages                       string        `json:"languages,omitempty"`
+	Languages                       [][]string    `json:"languages,omitempty"`
 	LastRatingUpdate                int           `json:"lastRatingUpdate,omitempty"`
 	EbayListingIds                  []float64     `json:"ebayListingIds,omitempty"`
 	LastEbayUpdate                  int           `json:"lastEbayUpdate,omitempty"`
 	EanList                         []string      `json:"eanList,omitempty"`
 	UpcList                         []string      `json:"upcList,omitempty"`
-	LiveOffersOrder                 string        `json:"liveOffersOrder,omitempty"`
+	LiveOffersOrder                 []int         `json:"liveOffersOrder,omitempty"`
 	FrequentlyBoughtTogether        []string      `json:"frequentlyBoughtTogether,omitempty"`
 	Features                        []string      `json:"features,omitempty"`
 	Description                     string        `json:"description,omitempty"`
-	HazardousMaterialType           string        `json:"hazardousMaterialType,omitempty"`
-	Promotions                      string        `json:"promotions,omitempty"`
+	HazardousMaterialType           int           `json:"hazardousMaterialType,omitempty"`
+	Promotions                      []interface{} `json:"promotions,omitempty"`
 	NewPriceIsMAP                   bool          `json:"newPriceIsMAP,omitempty"`
-	Coupon                          string        `json:"coupon,omitempty"`
+	Coupon                          []int         `json:"coupon,omitempty"`
 	AvailabilityAmazon              int           `json:"availabilityAmazon,omitempty"`
 	ListedSince                     int           `json:"listedSince,omitempty"`
 	FbaFees                         interface{}   `json:"fbaFees,omitempty"`
