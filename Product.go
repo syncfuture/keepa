@@ -6,7 +6,7 @@ import (
 	"io/ioutil"
 	"net/http"
 
-	u "github.com/syncfuture/go/util"
+	"github.com/syncfuture/go/u"
 )
 
 type GetProductQuery struct {
