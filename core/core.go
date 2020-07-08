@@ -14,7 +14,3 @@ const (
 var (
 	ConfigProvider config.IConfigProvider
 )
-
-func init() {
-	ConfigProvider = config.NewJsonConfigProvider()
-}
