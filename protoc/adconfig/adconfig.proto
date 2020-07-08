@@ -1,0 +1,13 @@
+syntax = "proto3";
+
+package adconfig;
+
+option go_package = "github.com/syncfuture/advertise/protoc/adconfig";
+
+message ADConfig {
+    string BaseURL   = 1;
+    string GrantType = 2;
+    string RedirectURI = 3;
+    string AccessToken = 4;
+    string RefreshToken = 5;
+}

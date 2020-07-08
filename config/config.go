@@ -1,7 +1,7 @@
 package config
 
 import (
-	"github.com/syncfuture/keepa/protoc/keepaconfig"
+	"github.com/syncfuture/advertise/protoc/adconfig"
 )
 
 // type KeepaConfig struct {
@@ -13,11 +13,11 @@ import (
 // }
 
 type IConfigGetter interface {
-	Get(userID, configID string) (*keepaconfig.KeepaConfig, error)
+	Get(userID, configID string) (*adconfig.ADConfig, error)
 }
 
 type IConfigManager interface {
-	Create(config *keepaconfig.KeepaConfig) error
-	Update(config *keepaconfig.KeepaConfig) error
+	Create(config *adconfig.ADConfig) error
+	Update(config *adconfig.ADConfig) error
 	Delete(userID, configID string) error
 }
