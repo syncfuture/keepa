@@ -108,6 +108,7 @@ type ProductDTO struct {
 	ListedSince                     int           `json:"listedSince,omitempty"`
 	FbaFees                         interface{}   `json:"fbaFees,omitempty"`
 	Variations                      []interface{} `json:"variations,omitempty"`
+	CSV                             []int         `json:"csv,omitempty"`
 }
 
 func (x *KeepaClient) GetProduct(query *GetProductQuery) (r *ProductResults, err error) {
